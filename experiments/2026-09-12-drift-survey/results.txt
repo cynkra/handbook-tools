@@ -1,0 +1,65 @@
+== pages, and the shared pages' line counts
+repository    pages   meta  rules author  exper  gloss
+ancestor         72     13    300    192     60     57
+copy             31      7    233    171      -     19
+adapt-1          30     14    180    109      -     12
+adapt-2          48     12    155    192     63    180
+adapt-3          47     10    152    189     21    407
+adapt-4          47     19    153    189     22    573
+template         13     13    207    162     59     89
+child-1          16     13    207    162     59    128
+child-2          24     12    207    162     59     96
+child-3          19     13    207    162     59    159
+child-4          20     13    207    162     59    113
+
+== lines differing from the ancestor's copy, and from the template's
+repository    rules/anc  rules/tpl   auth/anc   auth/tpl    exp/anc    exp/tpl
+ancestor              0        419          0        154          0         51
+copy                153        358        287        271        n/a        n/a
+adapt-1             368        325        261        231        n/a        n/a
+adapt-2             367        268        240        246         99         98
+adapt-3             364        265        237        243         67         66
+adapt-4             365        266        237        243         74         73
+template            419          0        154          0         51          0
+child-1             419          0        154          0         51          0
+child-2             419         12        154          8         51          2
+child-3             419          0        154          0         51          0
+child-4             419          0        154          0         51          0
+
+== the rule file and the skill, against the template's copy
+repository   prose-rule     docs-skill    
+ancestor     absent         341 lines     
+copy         absent         absent        
+adapt-1      absent         absent        
+adapt-2      absent         absent        
+adapt-3      absent         absent        
+adapt-4      absent         absent        
+template     identical      identical     
+child-1      identical      10 lines      
+child-2      4 lines        4 lines       
+child-3      identical      identical     
+child-4      identical      identical     
+
+== what the check script finds today, by tag (the em-dash check where the repository states the ban)
+ancestor     check-handbook: 1779 findings in 132 files (72 pages, 72 secondary documents, 0 exempt)
+               EM-DASH=1773 ORPHAN=6 
+copy         check-handbook: 1 findings in 1 files (31 pages, 2 secondary documents, 0 exempt)
+               DANGLING=1 
+adapt-1      check-handbook: 8 findings in 7 files (30 pages, 35 secondary documents, 0 exempt)
+               DANGLING=5 EM-DASH=2 ORPHAN=1 
+adapt-2      check-handbook: 9 findings in 5 files (48 pages, 165 secondary documents, 0 exempt)
+               EM-DASH=8 UNREGISTERED=1 
+adapt-3      check-handbook: 2053 findings in 152 files (47 pages, 169 secondary documents, 0 exempt)
+               DANGLING=4 EM-DASH=2048 ORPHAN=1 
+adapt-4      check-handbook: 906 findings in 116 files (47 pages, 134 secondary documents, 0 exempt)
+               DANGLING=1 EM-DASH=896 HEADING=8 ORPHAN=1 
+template     check-handbook: 1 findings in 1 files (13 pages, 75 secondary documents, 0 exempt)
+               ORPHAN=1 
+child-1      check-handbook: 1 findings in 1 files (16 pages, 92 secondary documents, 0 exempt)
+               ORPHAN=1 
+child-2      check-handbook: 7 findings in 7 files (24 pages, 73 secondary documents, 0 exempt)
+               ORPHAN=7 
+child-3      check-handbook: 1 findings in 1 files (19 pages, 74 secondary documents, 0 exempt)
+               ORPHAN=1 
+child-4      check-handbook: 1 findings in 1 files (20 pages, 99 secondary documents, 0 exempt)
+               ORPHAN=1 

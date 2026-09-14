@@ -1,0 +1,10 @@
+# A directory the checks skip.
+vendored/
+# A directory under the tree the checks skip too.
+handbook/vendored/
+# Generated output: exempt from the orphan check, still link-checked.
+orphan: docs/gen/
+# Quoted material: exempt from the em dash check alone.
+em-dash: notes/
+# Test snapshots a framework writes: exempt from the orphan check alone.
+orphan: tests/testthat/_snaps/

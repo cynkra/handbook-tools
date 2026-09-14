@@ -1,0 +1,31 @@
+# The files the vendoring script carries into a repository, one per line:
+# a class, a space, the path in the target. A comment runs to the end of its
+# line. Handbook: /handbook/adoption/README.md owns what each class means.
+#
+#   pointer  a one-paragraph leaf at the path of a shared page, pointing at
+#            its home here; taken from pointers/<path>, overwritten on update
+#   shared   a tooling file, copied byte for byte, overwritten on update
+#   stub     installed once from stubs/<path>, never overwritten, never
+#            required
+
+pointer handbook/meta/handbook/README.md
+pointer handbook/meta/authoring/README.md
+pointer handbook/meta/experiments/README.md
+pointer handbook/meta/forms/README.md
+pointer handbook/meta/growth/README.md
+pointer handbook/meta/style/README.md
+shared .claude/rules/prose-authoring.md
+shared .claude/skills/docs-consistency/SKILL.md
+shared .claude/skills/docs-consistency/scripts/check-handbook.sh
+shared .claude/skills/handbook-update/SKILL.md
+shared .claude/commands/docs/check.md
+shared .claude/commands/handbook/update.md
+stub AGENTS.md
+stub CLAUDE.md
+stub handbook/README.md
+stub handbook/meta/README.md
+stub handbook/meta/glossary/README.md
+stub handbook/meta/local/README.md
+stub experiments/README.md
+stub .handbook-ignore
+stub .github/workflows/handbook.yaml
