@@ -283,7 +283,10 @@ tree_links_of() {
   done
 }
 
-links_into_tree() { [ -n "$(tree_links_of "$1" | head -1)" ]; }
+# The whole output is read rather than the first line, because a runner that
+# ignores SIGPIPE would otherwise print an error for every write after head
+# closed the pipe.
+links_into_tree() { [ -n "$(tree_links_of "$1")" ]; }
 
 # What the shared rules exempt from a backreference on their own: a license,
 # and what a run captured beside an experiment record. Everything else a

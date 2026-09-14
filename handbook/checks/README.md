@@ -48,8 +48,9 @@ because an exemption whose rationale lives in a merged pull request gets re-argu
 A session runs it through the `docs-consistency` skill, which then works the judgment checks.
 CI runs it on every pull request from the workflow stub, with the full history checked out so that `STALE` can fire,
 and refuses the merge on a finding.
-The same workflow then checks out the source, which is public, and runs its vendoring script's `check`,
-so that a carried file edited in place is refused too ([`adoption/`](/handbook/adoption/README.md)).
+A second job checks out the source, which is public, with its full history, and runs its vendoring script's `check`,
+so that a carried file edited in place is refused too ([`adoption/`](/handbook/adoption/README.md));
+its own job, so that the source's files are never read as the repository's and each check reports its own result.
 The same list reaches both, so a finding CI reports is one the session could have seen.
 
 **What stays judgment.**

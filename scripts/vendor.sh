@@ -241,7 +241,7 @@ url: $SOURCE_URL
 commit: $commit
 source-date: $source_date
 checked: $today
-vendored:
+carried:
 MARKER
   awk '$1 != "stub" { print "  - " $2 }' "$tmp/manifest"
 } >"$marker"
