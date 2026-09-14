@@ -9,8 +9,8 @@ Shape and prose are conventions rather than preferences: a page that departs fro
 A preference nobody has enforced is not yet a rule, and does not belong on these pages.
 
 **The shared pages have one home, and the local page carries the difference.**
-The rules, the forms, the growth moves, authoring, style, and the evidence convention live in
-[`cynkra/handbook-tools`](https://github.com/cynkra/handbook-tools), and the pages here at their paths point there,
+The rules, the forms, the growth moves, authoring, style, and the evidence convention
+live in [`cynkra/handbook-tools`](https://github.com/cynkra/handbook-tools), and the pages here at their paths point there,
 so that every handbook built on them reads one text and a rule improved once is improved everywhere.
 Everything this repository chooses differently, or in addition, is stated on the local page and nowhere else,
 and `.handbook-source` at the root names the state of the source this handbook was last checked against.

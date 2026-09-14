@@ -4,7 +4,8 @@
 # covers everything below, and * spans directory separators. Write the reason
 # beside each line, and delete what does not apply here.
 # Handbook: /handbook/meta/local/README.md says what this repository does not
-# author, and that is what belongs here.
+# author, and the shared rules say what needs no backreference; both belong
+# here, by kind.
 
 # Vendored skills and commands are nobody's to reformat.
 em-dash: .claude/

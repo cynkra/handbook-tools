@@ -58,6 +58,8 @@ Where the marker's commit no longer exists in the source, the source's head is t
 the script says so, and stamping from the source's default branch rather than from a branch about to be squashed avoids it.
 A session runs the script through the `handbook-update` skill, and CI runs `check` from a checkout of this repository,
 which is public and needs no token ([`checks/`](/handbook/checks/README.md)).
+That checkout carries the full history, because a shallow one cannot resolve the marker's commit
+and would report every later change in the source as drift.
 
 **What an adopting repository fills in.**
 [`meta/local/`](/handbook/meta/local/README.md) answers the choices the shared pages leave open,
