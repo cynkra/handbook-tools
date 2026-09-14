@@ -1,0 +1,8 @@
+# Paths the handbook checks skip, one shell glob per line, matched against the
+# repository-relative path; a trailing / covers everything below.
+# Handbook: /handbook/meta/local/README.md says what this repository does not
+# author, and that is what belongs here, with the reason beside each pattern.
+
+# Deliberately broken handbook trees the check script is tested against; every
+# finding in them is intended, and tests/run.sh is what reads them.
+tests/fixtures/

@@ -1,0 +1,30 @@
+# Handbook: /handbook/meta/local/README.md says what runs the checks here, and
+# /handbook/checks/README.md owns what the script reports.
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # The full history, so that a derived document can be aged by its sources.
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Test the scripts against the fixtures
+        run: tests/run.sh
+
+      - name: Check this repository's own handbook
+        run: .claude/skills/docs-consistency/scripts/check-handbook.sh
+
+      - name: Confirm the manifest names files that exist
+        run: scripts/vendor.sh --target . check
