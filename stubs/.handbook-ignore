@@ -10,6 +10,12 @@
 # Vendored skills and commands are nobody's to reformat.
 em-dash: .claude/
 
+# A tool that ships its own agent skills and commands regenerates them in
+# place, so they are exempt from every check rather than from one: an edit to
+# one would not survive the next run.
+# .claude/skills/<tool>-*/
+# .claude/commands/<tool>/
+
 # Generated documents cannot carry a backreference; the generator does.
 # orphan: NEWS.md
 # orphan: tests/testthat/_snaps/

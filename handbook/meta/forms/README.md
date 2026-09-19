@@ -45,7 +45,8 @@ A file with nothing left worth keeping is deleted, and everything that linked to
 Its place in a directory of scripts or records is taken by an **in-place `README.md`**, the index GitHub renders when someone browses there:
 one row per file, grouped by the handbook leaf that owns each file's topic, written by hand or generated from the files' own headers.
 Where it is generated, the generator's file-to-leaf mapping is what a change edits, never the rendered table.
-One directory never gets an in-place index: a `.github/README.md` would be surfaced as the repository front page.
+One directory never gets an in-place index: a `.github/README.md` would be surfaced as the repository front page,
+because GitHub renders the first of `.github/README.md`, the root's, and `docs/README.md` that exists.
 
 **A backreference is how a leaf is found by someone who does not know the handbook exists.**
 Someone standing in a directory of scripts finds the leaf that explains what they are looking at.
@@ -62,5 +63,8 @@ An in-place index carries the backreference for every file it names, and where n
   the comment sits beside the documentation block rather than inside it.
 * *Generated files* take theirs in the generator, in the template the file is rendered from, so that it survives the next regeneration.
   Editing the output to add one is writing in sand.
+* *A file whose body another tool reproduces* declares its sources in an HTML comment instead of taking a visible line,
+  because the line would be copied into everything the tool produces, and the front matter above it belongs to that tool.
+  An issue or a pull request template is the usual case.
 * *A directory of vendored files* takes one `README.md` index instead of a line per file,
   because a line added to a vendored file is lost at its next bump.

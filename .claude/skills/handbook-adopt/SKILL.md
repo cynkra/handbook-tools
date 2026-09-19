@@ -77,6 +77,9 @@ and an edit it carried goes to the source as a patch, never back into the copy.
   in alphabetical order,
   drops the local-region markers, and says that the shared pages point to their home rather than being carried;
   the source's stub at `stubs/handbook/meta/README.md` is the text to take.
+* **The handbook root**, which the install leaves alone, keeps its areas and its child list,
+  and a paragraph naming where intent, status, and evidence live moves to the local page, which owns it now;
+  what stays is one sentence linking that page.
 * **The glossary** keeps the repository's own terms and drops the system's, which the source's glossary defines once;
   it names that glossary in one sentence, as the stub does, and drops the markers.
 * **The local page** is filled from step 2's list, one run-in heading per choice, every rule linking the leaf that owns it,
@@ -88,6 +91,18 @@ and an edit it carried goes to the source as a patch, never back into the copy.
   with its `paths:` narrowed so that the two do not both load on Markdown.
 * **The skills index**, where one exists, says which skills are carried and which are the repository's own,
   and the mirrors under `.github/` are copied from the carried files by hand.
+* **A skill or script that refreshes files from another template** lists the paths it may overwrite,
+  and the carried files and the pointer leaves come out of that list into one of their own,
+  marked as the source's rather than the template's, since otherwise the next refresh offers to undo the adoption.
+  The new class has to protect itself or it does not hold:
+  such a refresher usually lists its own file among the ones it may overwrite,
+  so the first accepted overwrite of it restores the old classes and deletes the guardrail in the same step.
+  The marker decides which paths are carried, rather than any list written inside the skill,
+  so that a file carried later is covered without the skill being edited again.
+* **A leaf that said review alone enforces the rules** is falsified by the install, which carries a workflow and a check script.
+  A repository that ran nothing mechanical has usually written that down,
+  on the leaf that owns its checks or its branch protection, and the conversion updates those leaves in the same change,
+  because a page saying nothing runs the checks is worse than one that never mentioned them.
 * **The ignore file** takes the exemptions the old checks had, by kind and with a reason beside each,
   and says whether em dashes are permitted; a second tool's ignore file stays until one absorbs the other.
 * **The workflow** runs the check script and then, after a checkout of the source, the vendoring script's `check`,

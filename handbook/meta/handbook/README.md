@@ -41,7 +41,8 @@ What this repository decides for itself, where these rules leave a choice open, 
 * **Names are paths, not positions.**
   A living page is never numbered (`01-vocabulary.md`).
   Order is a fact, and it already has a home in the list that sequences the pages.
-  A numbered filename stores that fact a second time, where only a rename can update it, and a rename rots every inbound link.
+  A numbered filename stores that fact a second time, where only a rename can update it,
+  and a rename rots every inbound link and every `derived_from:` entry naming the page.
   Number, or better date-stamp, only append-only artifacts whose identity is assigned once and never reordered:
   archived changes, log entries, snapshots, experiment records.
 * **Pointer leaves are legitimate.**

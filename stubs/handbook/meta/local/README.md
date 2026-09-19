@@ -23,6 +23,14 @@ and [`.handbook-source`](/.handbook-source) names the state of the source this h
 **The comment budget.**
 <!-- The formatter and the line width a comment aims for, per language. -->
 
+**Who the text may name.**
+<!-- Whether authored text, commit messages, and review comments may carry personal names,
+     and the leaf that owns the role vocabulary where they may not. -->
+
+**The language of the prose and of the domain.**
+<!-- Which language the prose takes, which language domain terms keep where the two differ,
+     and which orthographic variety of each. -->
+
 **Rules adopted beyond the shared ones.**
 
 * **No em dashes**, in prose and code alike.
