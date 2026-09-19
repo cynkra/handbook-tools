@@ -66,8 +66,9 @@ a small fix beats a paragraph, and a real limitation is stated with the issue th
 
 - A fact belongs on exactly one handbook leaf.
   If you are about to write a durable fact into a document outside `handbook/`, that is the signal to put it on a leaf and link it instead.
-- Every document outside `handbook/` either declares its handbook sources in `derived_from:` front matter
+- Every document outside `handbook/` either declares its handbook sources in a `derived_from:` list
   or carries a visible backreference to the node it serves.
+  The list sits in front matter, or in an HTML comment where the front matter belongs to another tool, as an issue template's does.
   A document with neither is an orphan.
 - Editing a document that declares `derived_from:` means editing its sources first, then re-deriving.
 - Link a boundary once per page, and link the leaf that owns the fact rather than the node above it.

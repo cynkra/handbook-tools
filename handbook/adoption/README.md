@@ -26,6 +26,12 @@ the rule file, the two skills with the check script, and the two commands.
 A *stub* is installed when absent, never overwritten, and never required: a repository that declines one keeps its own file in its place.
 The stubs are the router files, the handbook root, the `meta/` index, the glossary, the local page, the experiments registry,
 the ignore file, and the CI workflow.
+A stub installed at a free path may still be the wrong file.
+`install` writes every stub whose path is free, which is right for a repository that has nothing there,
+and wrong for one that keeps the same thing under another name.
+Deleting such a stub in the adopting change is the answer, and the local page says where that thing lives instead,
+so that a reader is not sent to a file nobody maintains.
+`check` passes either way, because a stub is never required.
 Everything else in a repository is its own, and the script never touches a file the manifest does not name.
 
 **The marker records when the whole handbook was last checked against the source.**
@@ -68,6 +74,15 @@ The glossary stub holds the repository's own terms, and names the glossary here 
 The router stubs and the handbook root carry comments saying what to write in their place.
 The ignore file names what the repository does not author, by kind and with a reason beside each line,
 and it is where a repository that permits em dashes says so, since the check reports them by default.
+An exemption is not a repeal.
+Where the checks arrive over text that predates them, the ignore file carries the paths no sweep has reached,
+and the reason beside each says that the rule still binds what is written from here on;
+an exemption written without that sentence reads as permission, and the next author takes it as one.
+The same holds where a rule binds only part of what a repository writes:
+the local page states the rule positively, naming what it binds, and the ignore file exempts the complement,
+so that the exemptions read as the shape of one rule rather than as a rule of their own.
+A repository whose build packages its root directory excludes the marker and the ignore file from that package
+the way it excludes the handbook itself, since neither is of use to a reader holding only the artifact.
 A rule that turns out to be enforced in more than one repository moves from a local page to the shared page it belongs on.
 
 **The way in from an earlier lineage.**
